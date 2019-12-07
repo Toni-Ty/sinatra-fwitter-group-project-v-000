@@ -9,7 +9,6 @@ end
   end
 
   def self.find_by_slug(slug)
-    self.all.select do |user|
-      user.slug == slug
-    end.first
+    User.all.find { |user| user.slug == slug}
   end
+end
