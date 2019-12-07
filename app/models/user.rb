@@ -5,7 +5,7 @@ end
 
 
   def slug
-    self.username.split(' ').join('-')
+    username.downcase.gsub(" ","-"))
   end
 
   def self.find_by_slug(slug)
